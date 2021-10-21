@@ -1,0 +1,10 @@
+@mixin basicFont($fontSize, $letterSpacing:normal, $lineHeight:normal) {
+    font-size: $fontSize;
+    font-family: 'PlayfairDisplay', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: $letterSpacing;
+    line-height: $lineHeight ;
+}
+
+
