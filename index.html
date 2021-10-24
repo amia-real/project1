@@ -6,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project1</title>
     <link rel='stylesheet' href = 'styles/style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5ba456ca4d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class = 'container'>
+    <header class = 'homeHeader container'>
         <nav>
             <ul class= 'navContainer'>
-                <li><a href="#">HOME</a></li>
+                <li><a class ='underline' href="index.html">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="blogPost.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
         <div class= 'imgContainerabs'>
             <img src="assets/header-box-image.jpg" alt="">
         </div>
-        <h1 class = 'homeH1'>Captured</h1>
+        <h1 class = 'homeH1'>CAPTURED</h1>
     </header>
 
     <section class= 'capturedSection'>
@@ -33,11 +38,11 @@
     
     <section class = 'skillSection container3'>
         <div class = 'imgContainer'>
-            <img src="assets/left-image.jpg" alt="">
+            <img class ='imgLeft' src="assets/left-image.jpg" alt="">
         </div>
-        <div class = 'textContainer'>
+        <div class = 'textContainer3'>
 
-            <h2>UNLOCK YOUR SKILLS</h2>
+            <h3>UNLOCK YOUR SKILLS</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculus at, consectetur vel turpis</p>
             <button>READ MORE</button>
         </div>
@@ -47,56 +52,96 @@
 
     <section class = 'gearSection container3 reverse'>
         <div class = 'imgContainer'>
-            <img src="assets/right-image.jpg" alt="">
+            <img class = 'imgRight' src="assets/right-image.jpg" alt="">
         </div>
-        <div class = 'textContainer'> 
-            <h2>GETTING NEW GEAR</h2>
+        <div class = 'textContainer2'> 
+            <h3>GETTING NEW GEAR</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculus at, consectetur vel turpis</p>
             <button>READ MORE</button>
         </div>
     </section>
 
-    <section>
-        <div>
-            <i></i>
-            <h2>TOP PICKS</h2>
-            <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
-        </div>
-        <div>
-            <i></i>
-            <h2>TOP PICKS</h2>
-            <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
-        </div>
-        <div>
-            <i></i>
-            <h2>TOP PICKS</h2>
-            <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
-        </div>
-        <div>
-            <i></i>
-            <h2>TOP PICKS</h2>
-            <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
+    <section class = 'iconSection'>
+        <div class="iconContainer container4">
+
+            <div class = 'container6'>
+                <div class="iconContainer">
+
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div>
+                    <h3>TOP PICKS</h3>
+                    <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
+                </div>
+            </div>
+            <div class = 'container6'>
+                <div class="iconContainer">
+
+                    <i class="fas fa-users"></i>
+                </div>
+                <div>
+                    <h3>COMMUNITY</h3>
+                    <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
+                </div>
+            </div>
+            <div class = 'container6'>
+                <div class="iconContainer">
+
+                    <i class="fas fa-file"></i>
+                </div>
+                <div>
+                    <h3>BLOG</h3>
+                    <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
+                </div>
+            </div>
+            <div class = 'container6'>
+                <div class="iconContainer">
+
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                    <h3>GET IN TOUCH</h3>
+                    <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section>
-        <img src = '' alt = 'Picture of a map with a camera, a pencil, a notebook and a bag on top.'>
+        <img src = 'assets/banner.jpg' alt = 'Picture of a map with a camera, a pencil, a notebook and a bag on top.'>
 
     </section>
 
-    <section>
-        <img src ='' alt ='Picture of a man sitting on top of a rock holding a camera while gazing upon the mountain in front of him'>
-
-        <h2>THIS MONTH PROFILE</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipsicing elit. Nulla pulvinar tortor nulla elementum eleifend. vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla ementum eleifend. Vestibulm consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convalis.</p>
-    </section>]
-    <section>
-        <img src="" alt="Picture of the back of a camera showing a black screen">
-        <img src="" alt=" Picture of the front of a camera sitting in some plants">
-        <img src="" alt="Picture from a top angle of the front of a Nikon camera">
+    <section class = 'profileSection '>
+        <div class="container5">
+            <div class = 'imgContainer'>
+                <img src ='assets/small-box.jpg' alt ='Picture of a man sitting on top of a rock holding a camera while gazing upon the mountain in front of him'>
+            </div>
+            <div class="textContainer">
+    
+                <h3>THIS MONTH PROFILE</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipsicing elit. Nulla pulvinar tortor nulla elementum eleifend. vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla ementum eleifend. Vestibulm consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convalis.</p>
+                <button>FIND OUT MORE</button>
+            </div>
+        </div>
+        
+    </section>
+    
+    <section class = 'gallerySection'>
+        <div class="grid">
+            <div class="imgContainer">
+                <img src="assets/gallery-image-1.jpg" alt="Picture of the back of a camera showing a black screen">
+            </div>
+            <div class="imgContainer">
+                <img src="assets/gallery-image-2.jpg" alt=" Picture of the front of a camera sitting in some plants">
+            </div>
+            <div class="imgContainer">
+                <img src="assets/gallery-image-3.jpg" alt="Picture from a top angle of the front of a Nikon camera">
+            </div>
+        </div>
     </section>
     <footer>
-        <p>Copyright 2018 HackerYou</p>
+        <p>Copyright © 2018 HackerYou</p>
     </footer>
 </body>
 </html>

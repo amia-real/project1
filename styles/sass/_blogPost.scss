@@ -1,3 +1,152 @@
-h1 {
-    @include basicFont (80px, normal, 92px );
+
+
+
+
+.blogHeader {
+    background-image: url('../assets/blog-header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    position: relative;
+
+    h1 {
+        @include basicFont (80px, normal, 92px );
+        text-align: center;
+        margin: 0;
+    }
 }
+
+
+.imgContainerBlogAbs {
+    position: absolute;
+    bottom: -40%;
+    right: 0;
+    width: 60%;
+    box-shadow: -30px 25px #FDFA69;
+    border-right: 0;
+    z-index: 4;
+}
+
+.blogSection {
+    display:flex;
+    justify-content: space-between;
+    background-color: #Effdf3;
+    .blogText {
+        max-width: calc(60% + 30px);
+        min-width: calc(60% + 30px);
+        border-left: 4px solid #FDFA69;
+        // border-bottom: 4px solid #FDFA69;
+        padding-top: 300px;
+        position: relative;
+
+        >*{
+            width: 80%;
+            margin: 0 30px;
+        }
+
+        p{
+            padding-bottom : 20px;
+        }
+    }
+    .blogText::after {
+        content : '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: calc(80% + 30px);
+        border-bottom: 4px solid #FDFA69;
+
+    }
+
+
+    .sideColumn {
+        width: 30%;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        
+
+        .imgContainer {
+            width: 100%;
+            // box-shadow: 30px 25px 0px -20px ;
+            box-shadow: 35px 17px 0px -18px #FAFAFA;
+        }
+        .textContainerSide{
+            background-color:#FAFAFA; 
+            width: 80%;
+            transform: translateX(17px);
+
+
+
+            li {
+                list-style: initial;
+                padding: 0;
+                color: #4ceea7;
+            }
+
+            span {
+                color: black;
+            }
+        }
+    }
+}
+
+
+.commentSection{
+    background-color: #Effdf3;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    >* {
+        width: 60%;
+    }
+
+    .commentContainer {
+        padding-bottom: 60px;
+        display:flex;
+
+        .imgContainer {
+            flex: 10%;
+
+            img {
+                padding-top: 8px;
+            }
+        }
+
+        .textContainer {
+            flex: 90%;
+            p {
+                margin: 0;
+                padding-left: 20px;
+                width: 80%;
+            }
+        }
+    }
+
+    .formBoxBlog {
+        height: 60vh;
+        
+        form.container {
+            width: 80%;
+            padding-bottom: 20px;
+
+            input, textarea  {
+
+                padding: 10px 0 10px 10px;
+                background-color: #Effdf3;
+            }
+        }
+
+       
+    }
+
+
+}
+
+
+

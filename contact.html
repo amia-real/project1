@@ -5,42 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel='stylesheet' href = 'styles/style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5ba456ca4d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class= 'contactHeader'>
         <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
+            <ul class= 'navContainer'>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="blogPost.html">BLOG</a></li>
+                <li><a class= 'underline' href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
         <h1>GET IN TOUCH</h1>
+        <div class= 'formBox'>
+            <form class= 'container'>
+                <div class="formContainer">
+    
+                    <input type="text" placeholder = 'Name'>
+                    <input type="email" placeholder = 'Email address'>
+                </div>
+                
+                <textarea placeholder="message"></textarea>
+                <button type='submit'>SUBMIT</button>
+            </form>
+    
+        </div>
     </header>
-    <section>
-        <form>
-            <input type="text" placeholder = 'Name'>
-            <input type="email" placeholder = 'Email address'>
-            <input type="texterea" placeholder = 'Message' name="" id="">
-            <input type = 'submit' value='SUBMIT'>
-        </form>
-
-
-    </section>
-    <section>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <h2>INFO@EMAIL.COM</h2>
+    <section class= contactInfo>
+        <div class="iconContainer">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <h4>INFO@EMAIL.COM</h4>
         <p>123-456-7890</p>
         <p>123 Queen Street West, Unit 10</p>
         <p>Toronto, Ontario</p>
         <p>M5V2D5</p>
     </section>
     <footer>
-        <p>Copyright 2018 HackerYou</p>
+        <p>Copyright © 2018 HackerYou</p>
     </footer>
 </body>
 </html>
