@@ -26,7 +26,7 @@
 
         <nav class = 'dropDownMenu'>
             <input type="checkbox" id="menu">
-            <label for="menu" class="fas fa-bars"></label>
+            <label for="menu"  aria-label= 'Menu' class="fas fa-bars"></label>
             <ul class= menuContent>
                 <li><a  href="index.html">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
@@ -100,14 +100,16 @@
 
         <div class ='formBoxBlog'>
             <form class= 'container'>
-                <div class="formContainer">   
-                    <input type="text" placeholder = 'Name'>
-                    <input type="email" placeholder = 'Email address'>
+                <div class="formContainer">
+                    <label  class = 'sr-only' for="name">Name</label>
+                    <input type="text"  name = 'name' placeholder = 'Name' id ='name'>
+                    <label  class = 'sr-only' for="email">Email</label>
+                    <input type="email" name = 'email' placeholder = 'Email address' id='email'>
                 </div>
-                <textarea placeholder="Comment"></textarea>
+                <label  class = 'sr-only' for="message">comment</label>
+                <textarea placeholder="Comment" id ='message'></textarea>
                 <button type='submit'>POST COMMENT</button>
             </form>
-        </div>
     </section>
     <footer>
         <p>Copyright © 2018 HackerYou</p>
