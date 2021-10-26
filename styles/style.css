@@ -520,12 +520,12 @@ input:checked ~ .menuContent {
           flex: 50%;
 }
 
-.container6 {
+.containerFlexIcon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.container6 i {
+.containerFlexIcon i {
   font-size: 30px;
   padding-top: 6px;
   padding-left: 11px;
@@ -535,23 +535,23 @@ input:checked ~ .menuContent {
   height: 50px;
   width: 50px;
 }
-.container6 .icon1 {
+.containerFlexIcon .icon1 {
   padding-top: 7px;
   padding-left: 9px;
 }
-.container6 .icon2 {
+.containerFlexIcon .icon2 {
   padding-top: 7px;
   padding-left: 6px;
 }
-.container6 .icon3 {
+.containerFlexIcon .icon3 {
   padding-top: 7px;
   padding-left: 14px;
 }
-.container6 .icon4 {
+.containerFlexIcon .icon4 {
   padding-top: 9px;
   padding-left: 9px;
 }
-.container6 .iconContainer {
+.containerFlexIcon .iconContainer {
   margin-right: 20px;
 }
 
