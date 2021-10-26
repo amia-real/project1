@@ -263,7 +263,8 @@ h3 {
   margin: 0;
 }
 
-p, li {
+p,
+li {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   line-height: 32px;
@@ -295,6 +296,18 @@ a {
 img {
   width: 100%;
   max-width: 100%;
+}
+
+.capturedSection,
+.iconSection,
+.profileSection {
+  background-color: #EFFDF3;
+}
+
+.gallerySection,
+.skillSection,
+.gearSection {
+  background-color: #FAFAFA;
 }
 
 .homeHeader {
@@ -367,17 +380,42 @@ ul li:last-child {
   z-index: 4;
 }
 
-.capturedSection {
+.dropDownMenu {
+  display: none;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+label {
+  font-size: 30px;
+}
+
+.menuContent {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 80%;
   background-color: #EFFDF3;
 }
-.capturedSection .textContainer {
+
+input:checked ~ .menuContent {
+  max-height: 100%;
+}
+
+.textContainer {
   margin: 0 auto;
   width: 60%;
   height: 100%;
   padding-bottom: 200px;
   padding-top: 280px;
 }
-.capturedSection .container2 {
+
+.container2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,22 +447,23 @@ ul li:last-child {
   width: 42%;
   margin: 0;
 }
-.container3 .imgContainer img {
+.container3 img {
   width: 100%;
 }
-.container3 .imgContainer .imgLeft {
+.container3 .imgLeft {
   -webkit-box-shadow: 30px 25px #FDFA69;
           box-shadow: 30px 25px #FDFA69;
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
 }
-.container3 .imgContainer .imgRight {
+.container3 .imgRight {
   -webkit-box-shadow: -30px 25px #FDFA69;
           box-shadow: -30px 25px #FDFA69;
   -webkit-transform: translateY(25px);
           transform: translateY(25px);
 }
-.container3 .textContainer2, .container3 .textContainer3 {
+.container3 .textContainer2,
+.container3 .textContainer3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,7 +475,8 @@ ul li:last-child {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.container3 .textContainer2 p, .container3 .textContainer3 p {
+.container3 .textContainer2 p,
+.container3 .textContainer3 p {
   width: 76.2%;
 }
 .container3 .textContainer2 {
@@ -455,10 +495,6 @@ ul li:last-child {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-}
-
-.iconSection {
-  background-color: #EFFDF3;
 }
 
 .container4 {
@@ -519,10 +555,7 @@ ul li:last-child {
   margin-right: 20px;
 }
 
-.profileSection {
-  background-color: #EFFDF3;
-}
-.profileSection .container5 {
+.container5 {
   width: 80%;
   height: 100%;
   margin: 0 auto;
@@ -535,28 +568,25 @@ ul li:last-child {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.profileSection .container5 .imgContainer {
+.container5 .imgContainer {
   width: 25%;
 }
-.profileSection .container5 .imgContainer img {
+.container5 .imgContainer img {
   -webkit-box-shadow: 15px 15px #FDFA69;
           box-shadow: 15px 15px #FDFA69;
 }
-.profileSection .container5 > * {
+.container5 > * {
   padding: 30px 0;
 }
-.profileSection .container5 > * h2 {
+.container5 > * h2 {
   margin: 0;
 }
-.profileSection .container5 .textContainer {
+.container5 .textContainer {
   padding-left: 80px;
   width: 75%;
 }
 
-.gallerySection {
-  background-color: #FAFAFA;
-}
-.gallerySection .grid {
+.grid {
   width: 80%;
   height: 100%;
   margin: 0 auto;
@@ -577,7 +607,8 @@ footer p {
 }
 
 @media (max-width: 850px) {
-  .container3 .textContainer3, .container3 .textContainer2 {
+  .container3 .textContainer3,
+.container3 .textContainer2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -608,17 +639,17 @@ footer p {
     width: 80%;
   }
 
-  .profileSection .container5 {
+  .container5 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .profileSection .container5 > * {
+  .container5 > * {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
   }
-  .profileSection .container5 .textContainer {
+  .container5 .textContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -634,7 +665,7 @@ footer p {
             align-items: center;
     padding-left: 0;
   }
-  .profileSection .container5 .imgContainer {
+  .container5 .imgContainer {
     max-width: 60%;
   }
 
@@ -642,7 +673,7 @@ footer p {
     display: none;
   }
 
-  .gallerySection > .grid {
+  .grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -650,7 +681,7 @@ footer p {
     font-size: 100px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 570px) {
   .homeH1 {
     font-size: 80px;
   }
@@ -663,20 +694,28 @@ footer p {
     font-size: 30px;
   }
 
-  .capturedSection > .container2 {
+  .container2 {
     padding-top: 20px;
   }
 
-  p, button {
+  p,
+button {
     font-size: 16px;
   }
 
   nav {
-    visibility: hidden;
+    display: none;
   }
 
-  .homeHeader {
+  .dropDownMenu {
+    display: block;
+  }
+
+  .homeHeader.container {
     background-position-x: 0px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 @media (max-width: 440px) {
@@ -688,7 +727,8 @@ footer p {
     font-size: 25px;
   }
 
-  p, button {
+  p,
+button {
     font-size: 12px;
   }
 }
@@ -725,6 +765,7 @@ h4 {
   text-align: center;
   padding-top: 150px;
   padding-left: 100px;
+  margin: 0;
 }
 
 .formBox {
@@ -736,7 +777,7 @@ h4 {
           box-shadow: -30px 25px #FDFA69;
   height: 70vh;
   padding: 40px;
-  background-color: white;
+  background-color: #fafafa;
 }
 
 form.container {
@@ -809,6 +850,47 @@ form.container textarea {
   padding-bottom: 20px;
 }
 
+@media (max-width: 1170px) {
+  h4 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 958px) {
+  .formBox {
+    right: 20%;
+  }
+
+  .contactInfo {
+    padding-top: 300px;
+    height: 90vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contactInfo > * {
+    width: 50%;
+  }
+}
+@media (max-width: 815px) {
+  .contactHeader {
+    background-position-X: 0px;
+  }
+
+  .formBox {
+    width: 80%;
+    right: 8%;
+  }
+
+  .contactInfo > * {
+    width: 70%;
+  }
+}
+@media (max-width: 746px) {
+  .contactHeader > h1 {
+    font-size: 70px;
+    padding-left: 0;
+  }
+}
 .blogHeader {
   background-image: url("../assets/blog-header.jpg");
   background-size: cover;
@@ -849,21 +931,23 @@ form.container textarea {
           justify-content: space-between;
   background-color: #Effdf3;
 }
-.blogSection .blogText {
+
+.blogText {
   max-width: calc(60% + 30px);
   min-width: calc(60% + 30px);
   border-left: 4px solid #FDFA69;
   padding-top: 300px;
   position: relative;
 }
-.blogSection .blogText > * {
+.blogText > * {
   width: 80%;
   margin: 0 30px;
 }
-.blogSection .blogText p {
+.blogText p {
   padding-bottom: 20px;
 }
-.blogSection .blogText::after {
+
+.blogText::after {
   content: "";
   position: absolute;
   left: 0;
@@ -872,7 +956,8 @@ form.container textarea {
   width: calc(80% + 30px);
   border-bottom: 4px solid #FDFA69;
 }
-.blogSection .sideColumn {
+
+.sideColumn {
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -888,26 +973,26 @@ form.container textarea {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-.blogSection .sideColumn .imgContainer {
+.sideColumn .imgContainer {
   width: 100%;
   -webkit-box-shadow: 35px 17px 0px -18px #FAFAFA;
           box-shadow: 35px 17px 0px -18px #FAFAFA;
 }
-.blogSection .sideColumn .textContainerSide {
+.sideColumn .textContainerSide {
   background-color: #FAFAFA;
   width: 80%;
   -webkit-transform: translateX(17px);
           transform: translateX(17px);
 }
-.blogSection .sideColumn .textContainerSide li {
+.sideColumn .textContainerSide li {
   list-style: initial;
   padding: 0;
   color: #4ceea7;
 }
-.blogSection .sideColumn .textContainerSide span {
+.sideColumn .textContainerSide span {
   color: black;
 }
-.blogSection .sideColumn .textContainerSide span.bold {
+.sideColumn .textContainerSide span.bold {
   font-weight: bold;
 }
 
@@ -927,38 +1012,130 @@ form.container textarea {
 .commentSection > * {
   width: 60%;
 }
-.commentSection .commentContainer {
+
+.commentContainer {
   padding-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.commentSection .commentContainer .imgContainer {
+.commentContainer .imgContainer {
   -webkit-box-flex: 10%;
       -ms-flex: 10%;
           flex: 10%;
 }
-.commentSection .commentContainer .imgContainer img {
+.commentContainer .imgContainer img {
   padding-top: 8px;
 }
-.commentSection .commentContainer .textContainer {
+.commentContainer .textContainerComment {
   -webkit-box-flex: 90%;
       -ms-flex: 90%;
           flex: 90%;
 }
-.commentSection .commentContainer .textContainer p {
+.commentContainer .textContainerComment p {
   margin: 0;
   padding-left: 20px;
   width: 80%;
 }
-.commentSection .formBoxBlog {
+
+.formBoxBlog {
   height: 60vh;
 }
-.commentSection .formBoxBlog form.container {
+.formBoxBlog form.container {
   width: 80%;
   padding-bottom: 20px;
 }
-.commentSection .formBoxBlog form.container input, .commentSection .formBoxBlog form.container textarea {
+.formBoxBlog form.container input,
+.formBoxBlog form.container textarea {
   padding: 10px 0 10px 10px;
   background-color: #Effdf3;
+}
+
+@media (max-width: 900px) {
+  .blogHeader {
+    height: 400px;
+  }
+
+  .sideColumn {
+    display: none;
+  }
+
+  .imgContainerBlogAbs {
+    right: 20%;
+  }
+
+  .blogSection {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .blogSection .blogText {
+    max-width: 80%;
+    border-right: 4px solid #FDFA69;
+  }
+  .blogSection .blogText > * {
+    width: 98%;
+    margin: 0;
+    padding-left: 1%;
+  }
+
+  .commentSection {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .commentSection > * {
+    width: 80%;
+  }
+
+  .blogText h2,
+.commentSection h2 {
+    text-align: center;
+  }
+
+  .blogText::after {
+    width: 100%;
+  }
+
+  .commentContainer .textContainerComment p,
+.formBoxBlog form.container {
+    width: 98%;
+  }
+}
+@media (max-width: 828px) {
+  .blogText h2,
+.commentSection h2 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 705px) {
+  .blogText h2,
+.commentSection h2 {
+    font-size: 30px;
+  }
+
+  .blogText p,
+.textContainerComment p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 611px) {
+  .blogText h2,
+.commentSection h2 {
+    font-size: 24px;
+  }
+
+  .blogText p,
+.textContainerComment p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) {
+  .blogText {
+    padding-top: 200px;
+  }
+
+  .blogHeader {
+    height: 300px;
+  }
 }

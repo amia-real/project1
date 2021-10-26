@@ -1,7 +1,7 @@
+//background Colors
 
 
-
-
+//header
 .blogHeader {
     @include headerImage(url('../assets/blog-header.jpg'));
     
@@ -28,68 +28,66 @@
     display:flex;
     justify-content: space-between;
     background-color: #Effdf3;
-    .blogText {
-        max-width: calc(60% + 30px);
-        min-width: calc(60% + 30px);
-        border-left: 4px solid #FDFA69;
-        // border-bottom: 4px solid #FDFA69;
-        padding-top: 300px;
-        position: relative;
+}
+.blogText {
+    max-width: calc(60% + 30px);
+    min-width: calc(60% + 30px);
+    border-left: 4px solid #FDFA69;
+    // border-bottom: 4px solid #FDFA69;
+    padding-top: 300px;
+    position: relative;
 
-        >*{
-            width: 80%;
-            margin: 0 30px;
-        }
-
-        p{
-            padding-bottom : 20px;
-        }
-    }
-    .blogText::after {
-        content : '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 4px;
-        width: calc(80% + 30px);
-        border-bottom: 4px solid #FDFA69;
-
+    >*{
+        width: 80%;
+        margin: 0 30px;
     }
 
+    p{
+        padding-bottom : 20px;
+    }
+}
+.blogText::after {
+    content : '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: calc(80% + 30px);
+    border-bottom: 4px solid #FDFA69;
 
-    .sideColumn {
-        width: 30%;
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
-        
+}
 
-        .imgContainer {
-            width: 100%;
-            // box-shadow: 30px 25px 0px -20px ;
-            box-shadow: 35px 17px 0px -18px #FAFAFA;
+.sideColumn {
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    
+
+    .imgContainer {
+        width: 100%;
+        box-shadow: 35px 17px 0px -18px #FAFAFA;
+    }
+    .textContainerSide{
+        background-color:#FAFAFA; 
+        width: 80%;
+        transform: translateX(17px);
+
+
+
+        li {
+            list-style: initial;
+            padding: 0;
+            color: #4ceea7;
         }
-        .textContainerSide{
-            background-color:#FAFAFA; 
-            width: 80%;
-            transform: translateX(17px);
 
+        span {
+            color: black;
+        }
 
-
-            li {
-                list-style: initial;
-                padding: 0;
-                color: #4ceea7;
-            }
-
-            span {
-                color: black;
-            }
-
-            span.bold {
-                font-weight: bold;
-            }
+        span.bold {
+            font-weight: bold;
         }
     }
 }
@@ -103,49 +101,140 @@
     
     >* {
         width: 60%;
-    }
+    }  
+}
+.commentContainer {
+    padding-bottom: 60px;
+    display:flex;
 
-    .commentContainer {
-        padding-bottom: 60px;
-        display:flex;
+    .imgContainer {
+        flex: 10%;
 
-        .imgContainer {
-            flex: 10%;
-
-            img {
-                padding-top: 8px;
-            }
-        }
-
-        .textContainer {
-            flex: 90%;
-            p {
-                margin: 0;
-                padding-left: 20px;
-                width: 80%;
-            }
+        img {
+            padding-top: 8px;
         }
     }
 
-    .formBoxBlog {
-        height: 60vh;
-        
-        form.container {
+    .textContainerComment {
+        flex: 90%;
+        p {
+            margin: 0;
+            padding-left: 20px;
             width: 80%;
-            padding-bottom: 20px;
-
-            input, textarea  {
-
-                padding: 10px 0 10px 10px;
-                background-color: #Effdf3;
-            }
         }
+    }
+}
 
-       
+.formBoxBlog {
+    height: 60vh;
+    
+    form.container {
+        width: 80%;
+        padding-bottom: 20px;
+
+        input, 
+        textarea  {
+
+            padding: 10px 0 10px 10px;
+            background-color: #Effdf3;
+        }
     }
 
-
+   
 }
 
 
+// media Queries
 
+@media (max-width: 900px) {
+    .blogHeader{
+        height: 400px;
+    }
+    .sideColumn {
+        display: none;
+    }
+    .imgContainerBlogAbs{
+       
+       right: 20%;
+    }
+
+    .blogSection {
+        justify-content: center;
+        
+        .blogText {
+            max-width: 80%;
+            border-right: 4px solid #FDFA69;
+            
+            >* {
+                width: 98%;
+                margin: 0;
+                padding-left: 1%;
+            }
+        }
+    }
+
+    .commentSection {
+        align-items: center;
+
+        >* {
+            width:80%;
+        }
+    }
+
+    .blogText h2,
+    .commentSection h2 {
+        text-align: center;
+    }
+    .blogText::after {
+        width: 100%;
+    }
+
+    .commentContainer .textContainerComment p,
+    .formBoxBlog form.container {
+        width: 98%;
+    }
+}
+
+
+@media (max-width: 828px) {
+    .blogText h2,
+    .commentSection h2 {
+        font-size: 35px;
+    }
+}
+
+
+@media ( max-width: 705px) {
+    .blogText h2,
+    .commentSection h2{
+        font-size: 30px;
+    }
+
+    .blogText p, 
+    .textContainerComment p {
+        font-size: 15px;
+    }
+}
+
+
+@media( max-width: 611px) {
+    .blogText h2,
+    .commentSection h2{
+        font-size: 24px;
+    }
+
+    .blogText p, 
+    .textContainerComment p {
+        font-size: 12px;
+    }
+}
+
+
+@media( max-width: 425px) {
+    .blogText {
+        padding-top: 200px;
+    }
+    .blogHeader {
+        height: 300px;
+    }
+}

@@ -13,7 +13,8 @@ h3 {
     @include basicFont(32px, 1px);
     margin: 0;
 }
-p, li {
+p,
+li {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     line-height: 32px;
@@ -35,6 +36,19 @@ img {
     width: 100%;
     max-width: 100%;
 }
+// Background Colors
+.capturedSection, 
+.iconSection, 
+.profileSection {
+    background-color: #EFFDF3;   
+}
+
+.gallerySection,
+.skillSection,
+.gearSection {
+    background-color: #FAFAFA;
+}
+
 // Header Section
 
 .homeHeader {
@@ -92,26 +106,50 @@ ul {
     border-right: 0;
     z-index: 4;
 }
+// Drop-down menu
+.dropDownMenu {
+    display:none;
+    position:absolute;
+    top: 1%;
+    left: 1%;
+}
+input[type=checkbox] {
+    display:none
+}
+label {
+    font-size: 30px;
+}
+
+.menuContent {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 80%;
+    background-color: #EFFDF3;
+
+
+}
+
+input:checked ~ .menuContent {
+    max-height: 100%;
+}
 
 // Capture Section
-.capturedSection {
-    
-    background-color: #EFFDF3;
-    
-    .textContainer {
-        margin: 0 auto;
-        width:60%;
-        height: 100%;
-        padding-bottom : 200px;
-        padding-top: 280px;
-    }
-    
-    .container2 {
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-    }
+
+
+.textContainer {
+    margin: 0 auto;
+    width:60%;
+    height: 100%;
+    padding-bottom : 200px;
+    padding-top: 280px;
+}
+
+.container2 {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 
@@ -126,21 +164,22 @@ ul {
         width: 42%;  
         margin: 0;
     }
-    .imgContainer {
-        img {
-            width: 100%;
-            
-        }
-        .imgLeft {
-            box-shadow: 30px 25px #FDFA69;
-            transform: translateY(-25px);
-        }
-        .imgRight {
-            box-shadow: -30px 25px #FDFA69;
-            transform: translateY(25px);
-        }
+    // inside the imgContainer
+    img {
+        width: 100%;
+        
     }
-    .textContainer2, .textContainer3 {
+    .imgLeft {
+        box-shadow: 30px 25px #FDFA69;
+        transform: translateY(-25px);
+    }
+    .imgRight {
+        box-shadow: -30px 25px #FDFA69;
+        transform: translateY(25px);
+    }
+    
+    .textContainer2, 
+    .textContainer3 {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -167,10 +206,7 @@ ul {
 
 
 //Icon section
-.iconSection {
-    background-color: #EFFDF3;
-    
-}
+
 .container4 {
     height:100%;
     width: 80%;
@@ -225,50 +261,46 @@ ul {
 }
 
 //profile section
-.profileSection{
-    background-color: #EFFDF3;
-    .container5{
-            width: 80%;
-            height: 100%;
-            margin: 0 auto;
+
+.container5{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .imgContainer {
+        width:25%;
+
+        img {
+            box-shadow: 15px 15px #FDFA69;
             
-            display:flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            .imgContainer {
-                width:25%;
-
-                img {
-                    box-shadow: 15px 15px #FDFA69;
-                    
-                }
-            }
-            >* {
-               padding: 30px 0;
-               h2 {
-                margin: 0;
-                   
-               }
-            }
-
-            .textContainer {
-                padding-left: 80px;
-                width: 75%;
-            }
         }
+    }
+    >* {
+        padding: 30px 0;
+        h2 {
+        margin: 0;
+            
+        }
+    }
+
+    .textContainer {
+        padding-left: 80px;
+        width: 75%;
+    }
 }
 // Gallery Section
-.gallerySection {
-    background-color: #FAFAFA;
-    .grid {
-        width:80%;
-        height: 100%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 40px;
-        padding: 40px 0;
-    }
+
+.grid {
+    width:80%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 40px 0;
 }
 
 
@@ -286,7 +318,8 @@ footer {
 
 @media (max-width: 850px) {
     .container3 {
-        .textContainer3, .textContainer2{
+        .textContainer3, 
+        .textContainer2{
             justify-content: center;
             align-items: center;
         }
@@ -317,31 +350,29 @@ footer {
     .capturedSection > .textContainer {
         width: 80%;
     }
-    .profileSection{
-        .container5 {
-            justify-content: center;
-            >*{
-                flex: 100%;
-            }
-
-            .textContainer {
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding-left: 0;
-            }
-
-            .imgContainer{
-                max-width: 60%;
-            }
-            
+    .container5 {
+        justify-content: center;
+        >*{
+            flex: 100%;
         }
+
+        .textContainer {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0;
+        }
+
+        .imgContainer{
+            max-width: 60%;
+        }
+        
     }
     .image3{
         display: none;
     }
-    .gallerySection > .grid {
+    .grid {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -352,7 +383,7 @@ footer {
 
 
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
     .homeH1 {
         font-size: 80px;
     }
@@ -363,20 +394,25 @@ footer {
     h2 {
         font-size: 30px;
     }
-    .capturedSection>.container2 {
+    .container2 {
         padding-top: 20px;
     }
 
-    p , button {
+    p, 
+    button {
         font-size: 16px;
     }
 
     nav {
-        visibility: hidden; // is this still seen by screen reader????
+        display:none; // is this still seen by screen reader????
+    }
+    .dropDownMenu {
+        display: block;
     }
 
-    .homeHeader {
+    .homeHeader.container {
         background-position-x : 0px;
+        justify-content: flex-end;
     }
 }
 
@@ -390,7 +426,8 @@ footer {
         font-size: 25px;
     }
 
-    p , button {
+    p, 
+    button {
         font-size: 12px;
     }
 }
