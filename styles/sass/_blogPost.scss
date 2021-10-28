@@ -3,7 +3,7 @@
 
 //header
 .blogHeader {
-    @include headerImage(url('../assets/blog-header.jpg'));
+    @include headerImage(url('../assets/blogHeader.jpg'));
     
 
     h1 {
@@ -22,6 +22,9 @@
     box-shadow: -30px 25px #FDFA69;
     border-right: 0;
     z-index: 4;
+    img {
+        display: block;
+    }
 }
 
 .blogSection {
@@ -73,13 +76,17 @@
         background-color:#FAFAFA; 
         width: 80%;
         transform: translateX(17px);
+        padding-left: 10px;
 
-
+        ul {
+           padding-left: 15px;
+        }
 
         li {
             list-style: initial;
             padding: 0;
             color: #4ceea7;
+            
         }
 
         span {

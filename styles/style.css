@@ -311,7 +311,7 @@ img {
 }
 
 .homeHeader {
-  background-image: url("../assets/header-image.jpg");
+  background-image: url("../assets/headerImage.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -361,7 +361,7 @@ ul li .underline::before {
   width: 105%;
   height: 2px;
   background-color: #4ceea7;
-  z-index: 55;
+  z-index: 999;
   position: absolute;
   bottom: -5px;
   left: -4px;
@@ -379,12 +379,16 @@ ul li:last-child {
   border-right: 0;
   z-index: 4;
 }
+.imgContainerabs img {
+  display: block;
+}
 
 .dropDownMenu {
   display: none;
   position: absolute;
   top: 1%;
   left: 1%;
+  z-index: 999;
 }
 
 input[type=checkbox] {
@@ -747,7 +751,7 @@ h4 {
 }
 
 .contactHeader {
-  background-image: url("../assets/contact-header.jpg");
+  background-image: url("../assets/contactHeader.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -811,6 +815,10 @@ form.container textarea {
   border: 2px solid #4ceea7;
   height: 60%;
   margin: 10px 0;
+}
+form.container input,
+form.container textarea {
+  background-color: #fafafa;
 }
 
 .contactInfo {
@@ -892,7 +900,7 @@ form.container textarea {
   }
 }
 .blogHeader {
-  background-image: url("../assets/blog-header.jpg");
+  background-image: url("../assets/blogHeader.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -920,6 +928,9 @@ form.container textarea {
           box-shadow: -30px 25px #FDFA69;
   border-right: 0;
   z-index: 4;
+}
+.imgContainerBlogAbs img {
+  display: block;
 }
 
 .blogSection {
@@ -983,6 +994,10 @@ form.container textarea {
   width: 80%;
   -webkit-transform: translateX(17px);
           transform: translateX(17px);
+  padding-left: 10px;
+}
+.sideColumn .textContainerSide ul {
+  padding-left: 15px;
 }
 .sideColumn .textContainerSide li {
   list-style: initial;

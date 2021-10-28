@@ -5,7 +5,7 @@ h4 {
 
 //header
 .contactHeader {
-    @include headerImage (url('../assets/contact-header.jpg'));
+    @include headerImage (url('../assets/contactHeader.jpg'));
     
     h1 {
         @include basicFont(82px, normal, 92px);
@@ -51,6 +51,10 @@ form.container {
         border: 2px solid #4ceea7;
         height: 60%;
         margin: 10px 0;
+    }
+    input,
+    textarea {
+        background-color: #fafafa;
     }
     
 }
