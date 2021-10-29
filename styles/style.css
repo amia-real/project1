@@ -278,7 +278,7 @@ button {
   letter-spacing: 1px;
   line-height: 32px;
   text-align: center;
-  padding: 0 10px;
+  padding: 8px 10px;
   background-color: #4ceea7;
   border: none;
 }
@@ -367,7 +367,7 @@ ul li .underline::before {
   left: -4px;
 }
 ul li:last-child {
-  padding-right: 100px;
+  padding-right: 130px;
 }
 
 .imgContainerabs {
@@ -819,6 +819,27 @@ form.container textarea {
 form.container input,
 form.container textarea {
   background-color: #fafafa;
+  padding: 10px 0 10px 30px;
+}
+form.container ::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+form.container ::-moz-placeholder {
+  color: black;
+  opacity: 1;
+}
+form.container :-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+form.container ::-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+form.container ::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 .contactInfo {
@@ -917,6 +938,7 @@ form.container textarea {
   line-height: 92px;
   text-align: center;
   margin: 0;
+  margin-top: 45px;
 }
 
 .imgContainerBlogAbs {
@@ -970,6 +992,7 @@ form.container textarea {
 
 .sideColumn {
   width: 30%;
+  padding-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1062,8 +1085,29 @@ form.container textarea {
 }
 .formBoxBlog form.container input,
 .formBoxBlog form.container textarea {
+  color: black;
   padding: 10px 0 10px 10px;
   background-color: #Effdf3;
+}
+.formBoxBlog form.container ::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+.formBoxBlog form.container ::-moz-placeholder {
+  color: black;
+  opacity: 1;
+}
+.formBoxBlog form.container :-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+.formBoxBlog form.container ::-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+.formBoxBlog form.container ::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 @media (max-width: 900px) {

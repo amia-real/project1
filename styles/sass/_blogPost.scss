@@ -10,6 +10,7 @@
         @include basicFont (80px, normal, 92px );
         text-align: center;
         margin: 0;
+        margin-top: 45px;
     }
 }
 
@@ -61,6 +62,7 @@
 
 .sideColumn {
     width: 30%;
+    padding-top : 60px;
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -140,9 +142,14 @@
 
         input, 
         textarea  {
-
+            color: black;
             padding: 10px 0 10px 10px;
             background-color: #Effdf3;
+        }
+
+        ::placeholder {
+            color: black;
+            opacity: 1;
         }
     }
 
