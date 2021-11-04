@@ -1034,7 +1034,7 @@ form.container ::placeholder {
   font-weight: bold;
 }
 
-.commentSection {
+.commentSection, .formSection {
   background-color: #Effdf3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1047,7 +1047,7 @@ form.container ::placeholder {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-.commentSection > * {
+.commentSection > *, .formSection > * {
   width: 60%;
 }
 
